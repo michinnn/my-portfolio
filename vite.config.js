@@ -1,10 +1,8 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from 'tailwindcss'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  plugins: [react(),
-    tailwindcss(),
-  ],
+  // replace with your repo name if different
   base: '/mai-portfolio/',
-})
+  plugins: [react()],
+});
