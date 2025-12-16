@@ -11,7 +11,7 @@ import './App.css'
 import logo2 from '/assets/logo2.png'
 import arrowdown from '/assets/arrowdown.png'
 import bgimage from '/assets/bgimage.png'
-import me from '  /assets/me.png'
+import me from '/assets/me.png'
 
 function App() {
   const [count, setCount] = useState(0)
