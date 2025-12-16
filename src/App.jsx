@@ -8,10 +8,10 @@ import { RiPencilRuler2Line } from "react-icons/ri";
 import './App.css'
 
 //IMPORT IMAGES HERE
-import logo2 from './assets/logo2.png'
-import me from './assets/me.png'
-import bgimage from './assets/bg-image.png'
-import arrowdown from './assets/arrowdown.png'
+import logo2 from 'logo2.png'
+import me from 'me.png'
+import bgimage from 'bg-image.png'
+import arrowdown from 'arrowdown.png'
 
 function App() {
   const [count, setCount] = useState(0)
