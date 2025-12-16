@@ -2,10 +2,11 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from 'tailwindcss'
 
-// https://vite.dev/config/
+const repoName = 'mai-portfolio';
+
 export default defineConfig({
-  base: '/mai-portfolio/',
   plugins: [react(),
     tailwindcss(),
   ],
+  base: `/${repoName}/`,
 })
