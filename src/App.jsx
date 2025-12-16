@@ -7,12 +7,6 @@ import { BiSolidContact } from "react-icons/bi";
 import { RiPencilRuler2Line } from "react-icons/ri";
 import './App.css'
 
-//IMPORT IMAGES HERE
-import logo2 from '/logo2.png'
-import arrowdown from '/arrowdown.png'
-import bgimage from '/bgimage.png'
-import me from '/me.png'
-
 function App() {
   const [count, setCount] = useState(0)
 
@@ -21,7 +15,7 @@ function App() {
     <div className='w-full flex flex-col items-center justify-center font-varela'>
       <div className='flex items-center w-full max-w-6xl px-4 py-4 md:flex-row md:gap-0'>
         <div className='w-1/4 '>
-          <img src={logo2} alt="icon" className='w-10 h-10'/>
+          <img src="/logo2.png" alt="icon" className='w-10 h-10'/>
         </div>
 
         <div className='w-1/2 flex justify-center gap-20 text-palette5 font-semibold bg-palette1 py-4 rounded-full'>
@@ -40,11 +34,11 @@ function App() {
       <div className='flex w-full px-4 max-w-6xl'>
         <div className='w-1/2 flex-col items-start justify-start mt-24 text-4xl'>
           <h1 className='text-palette2 uppercase tracking-widest'>I'm Mai, a <span className='text-palette1'>UI Designer</span> and <span className='text-palette1'>Front-End Developer</span></h1>
-          <img src={arrowdown} alt="" className='mt-10 h-32'/>
+          <img src="/arrowdown.png" alt="" className='mt-10 h-32'/>
         </div>
         <div className='w-1/2 flex items-center justify-end'>
-          <img src={bgimage} alt=""className='w-full h-auto'/>
-          <img src={me} alt="overlay" className='absolute top-24 right-44 w-1/3 h-auto'/>
+          <img src="/bgimage.png" alt=""className='w-full h-auto'/>
+          <img src="/me.png" alt="overlay" className='absolute top-24 right-44 w-1/3 h-auto'/>
         </div>
       </div>
 
