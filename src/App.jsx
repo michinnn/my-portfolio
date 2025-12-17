@@ -48,15 +48,15 @@ function App() {
           </div>
         </div>
 
-        <div className='flex flex-col md:flex-row w-full max-w-6xl px-4 py-10 md:py-20 gap-4 md:gap-10 justify-center items-center uppercase text-palette3 text-4xl md:text-6xl font-black'>
+        <div className='flex flex-col md:flex-row w-full max-w-6xl px-4 py-10 md:py-20 gap-4 md:gap-10 justify-center items-center uppercase text-palette3 text-4xl md:text-4xl font-black'>
           <div className=' hover:text-palette1 cursor-pointer'>
-            <h2>Projects.</h2>
+            <h2>Web Design.</h2>
           </div>
           <div className=' hover:text-palette1 cursor-pointer'>
-            <h2>UI Design.</h2>
+            <h2>Mobile Design.</h2>
           </div>
           <div className=' hover:text-palette1 cursor-pointer'>
-            <h2>App/Web.</h2>
+            <h2>Others.</h2>
           </div>
         </div>
       </div>
