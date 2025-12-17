@@ -14,8 +14,6 @@ import bgimage from '/assets/bgimage.png'
 import me from '/assets/me.png'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
     <div className='w-full flex flex-col items-center justify-center font-varela'>
@@ -43,8 +41,10 @@ function App() {
           <img src={arrowdown} alt="" className='mt-10 h-32'/>
         </div>
         <div className='w-1/2 flex items-center justify-end'>
-          <img src={bgimage} alt=""className='w-full h-auto'/>
-          <img src={me} alt="overlay" className='absolute top-24 right-44 w-1/3 h-auto'/>
+         <div className='flex relative w-full h-auto'>
+            <img src={bgimage} alt=""className='w-full h-auto scale-120'/>
+            <img src={me} alt="overlay" className='absolute w-full h-auto scale-75 -mt-9'/>
+          </div>
         </div>
       </div>
 
