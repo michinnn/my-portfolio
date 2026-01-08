@@ -15,6 +15,12 @@ import me from '/assets/me.png'
 import pickmeup1 from '/assets/pickmeup1.png'
 import bgcircle from '/assets/bg-circle.png'
 import notdeadyet from '/assets/notdeadyet1.png'
+import skillset from '/assets/skills.png'
+import projects from '/assets/projects.png'
+import attendancesystem from '/assets/attendancesystem.png'
+import fairygod from '/assets/fairygod.png'
+import loadapp from '/assets/LoadApp.png'
+import purplejeepney from '/assets/purplejeepney.png'
 
 function App() {
   return (
@@ -61,23 +67,46 @@ function App() {
         </div>
         <div className='flex w-full flex-col justify-center font-varela text-palette1 text-center py-12 px-36 gap-24'>
           <div className='flex flex-col w-full text-justify gap-8 items-start '> 
-            <h1 className='text-3xl'>This is Ma. Andrhea Ivhon, a UI/UX designer and a Junior Front-End Developer.</h1>
-            <p className='text-2xl leading-10 font-extralight'>I spent most of my time working on enhancing my designing and developing skills. Nowadays, we should not settle on things we already have knowledge. Technology is innovating every time so we should also innovate and up-skill.</p>
+            <h1 className='text-2xl'>This is Ma. Andrhea Ivhon, a UI/UX designer and a Junior Front-End Developer.</h1>
+            <p className='text-lg leading-10 font-extralight'>I spent most of my time working on enhancing my designing and developing skills. Nowadays, we should not settle on things we already have knowledge. Technology is innovating every time so we should also innovate and up-skill.</p>
           </div>
           <div className='flex flex-col w-full text-justify gap-8 items-start'>
-            <h1 className='text-3xl'>Why UI/UX Designing and Developing?</h1>
-            <p className='text-2xl leading-10 font-extralight'>As a creative person and a person who have a playful mind, I fall in love first in designing application and website interface. I got curious on developing my own design that’s why I am on my learning phase on developing web and app. I really love whenever I saw the result first hand on what I designed turn into a interactive website and mobile application.</p>
+            <h1 className='text-2xl'>Why UI/UX Designing and Developing?</h1>
+            <p className='text-lg leading-10 font-extralight'>As a creative person and a person who have a playful mind, I fall in love first in designing application and website interface. I got curious on developing my own design that’s why I am on my learning phase on developing web and app. I really love whenever I saw the result first hand on what I designed turn into a interactive website and mobile application.</p>
           </div>
           <div className='flex flex-col w-full text-justify gap-8 items-start'>
-            <h1 className='text-3xl'>In the near future, I want to collaborate more to other designers and developers who share the same dreams with me. </h1>
+            <h1 className='text-2xl'>In the near future, I want to collaborate more to other designers and developers who share the same dreams with me. </h1>
           </div>
           </div>
         </div>
 
         <div className='flex w-full flex-col py4 px-4 justify-center items-center'>
           <img src={notdeadyet} alt="notdeadyet" className='w-1/6 h-auto scale-50'/>
-          <h1 className='text-6xl font-semibold text-palette2 font-varela'>Skill Set</h1>
+          <h1 className='text-5xl font-semibold text-palette2 font-varela'>Skill Set</h1>
           <img src={notdeadyet} alt="notdeadyet" className='w-1/6 h-auto scale-50 rotate-180'/>
+
+          <div className='flex w-full h-auto py-4 px-4 scale-90'>
+            <img src={skillset} alt="skillset" className='w-full h-auto mt-10'/>
+          </div>
+        </div>
+
+        <div className='flex flex-col w-full h-auto py-32 justify-center items-center'>
+          <div className='flex w-1/4 h-auto scale-100'>
+          <img src={projects} alt="projects" className='w-full h-auto mt-10'/>
+          </div>
+
+
+          <div className='flex flex-col w-full'>
+            <div className='flex w-full bg-palette3 px-24 items-start'>
+              <div className='flex w-1/2 items-end'>
+                <img src={fairygod} alt="fairygod" className='mt-16'/>
+              </div>
+              <div className='flex w-1/2 justify-center mt-16'>
+              <h1 className='flex font-bebasneue text-palette5 text-6xl'>Fairy God Barbie</h1>
+              </div>
+            </div>
+          </div>
+
         </div>
     </>
   )

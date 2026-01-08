@@ -15,6 +15,7 @@ export default {
       },
       fontFamily: {
         varela: ['"Varela Round"', 'sans-serif'],
+        bebasneue: ['"Bebas Neue"', 'sans-serif'],
     },
   },
   plugins: [],
