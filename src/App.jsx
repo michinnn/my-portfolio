@@ -14,6 +14,7 @@ import bgimage from '/assets/bgimage.png'
 import me from '/assets/me.png'
 import pickmeup1 from '/assets/pickmeup1.png'
 import bgcircle from '/assets/bg-circle.png'
+import notdeadyet from '/assets/notdeadyet1.png'
 
 function App() {
   return (
@@ -51,13 +52,12 @@ function App() {
         </div>
       </div>
 
-      <div className='flex relative w-full h-auto'>
+  <div className='w-full flex flex-col justify-center items-center py-20 px-4 mt-10'>
+      <div className='flex absolute w-full h-auto'>
         <img src={bgcircle} alt="" className='w-full h-auto scale-120' />
-        <div className='w-full flex flex-col justify-center items-center py-20 px-4 mt-10'>
-        </div>
       </div>
         <div className='flex w-full justify-center'>
-          <img src={pickmeup1} alt="pickmeup" className='w-1/18 h-auto scale-30'/>
+          <img src={pickmeup1} alt="pickmeup" className='w-1/6 h-auto scale-50'/>
         </div>
         <div className='flex w-full flex-col justify-center font-varela text-palette1 text-center py-12 px-36 gap-24'>
           <div className='flex flex-col w-full text-justify gap-8 items-start '> 
@@ -71,6 +71,13 @@ function App() {
           <div className='flex flex-col w-full text-justify gap-8 items-start'>
             <h1 className='text-3xl'>In the near future, I want to collaborate more to other designers and developers who share the same dreams with me. </h1>
           </div>
+          </div>
+        </div>
+
+        <div className='flex w-full flex-col py4 px-4 justify-center items-center'>
+          <img src={notdeadyet} alt="notdeadyet" className='w-1/6 h-auto scale-50'/>
+          <h1 className='text-6xl font-semibold text-palette2 font-varela'>Skill Set</h1>
+          <img src={notdeadyet} alt="notdeadyet" className='w-1/6 h-auto scale-50 rotate-180'/>
         </div>
     </>
   )
