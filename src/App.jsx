@@ -12,6 +12,8 @@ import logo2 from '/assets/logo2.png'
 import arrowdown from '/assets/arrowdown.png'
 import bgimage from '/assets/bgimage.png'
 import me from '/assets/me.png'
+import pickmeup1 from '/assets/pickmeup1.png'
+import bgcircle from '/assets/bg-circle.png'
 
 function App() {
   return (
@@ -47,19 +49,29 @@ function App() {
             </div>
           </div>
         </div>
+      </div>
 
-        <div className='flex flex-col md:flex-row w-full max-w-6xl px-4 py-10 md:py-20 gap-4 md:gap-10 justify-center items-center uppercase text-palette3 text-4xl md:text-4xl font-black'>
-          <div className=' hover:text-palette1 cursor-pointer'>
-            <h2>Web Design.</h2>
-          </div>
-          <div className=' hover:text-palette1 cursor-pointer'>
-            <h2>Mobile Design.</h2>
-          </div>
-          <div className=' hover:text-palette1 cursor-pointer'>
-            <h2>Others.</h2>
-          </div>
+      <div className='flex relative w-full h-auto'>
+        <img src={bgcircle} alt="" className='w-full h-auto scale-120' />
+        <div className='w-full flex flex-col justify-center items-center py-20 px-4 mt-10'>
         </div>
       </div>
+        <div className='flex w-full justify-center'>
+          <img src={pickmeup1} alt="pickmeup" className='w-1/18 h-auto scale-30'/>
+        </div>
+        <div className='flex w-full flex-col justify-center font-varela text-palette1 text-center py-12 px-36 gap-24'>
+          <div className='flex flex-col w-full text-justify gap-8 items-start '> 
+            <h1 className='text-3xl'>This is Ma. Andrhea Ivhon, a UI/UX designer and a Junior Front-End Developer.</h1>
+            <p className='text-2xl leading-10 font-extralight'>I spent most of my time working on enhancing my designing and developing skills. Nowadays, we should not settle on things we already have knowledge. Technology is innovating every time so we should also innovate and up-skill.</p>
+          </div>
+          <div className='flex flex-col w-full text-justify gap-8 items-start'>
+            <h1 className='text-3xl'>Why UI/UX Designing and Developing?</h1>
+            <p className='text-2xl leading-10 font-extralight'>As a creative person and a person who have a playful mind, I fall in love first in designing application and website interface. I got curious on developing my own design that’s why I am on my learning phase on developing web and app. I really love whenever I saw the result first hand on what I designed turn into a interactive website and mobile application.</p>
+          </div>
+          <div className='flex flex-col w-full text-justify gap-8 items-start'>
+            <h1 className='text-3xl'>In the near future, I want to collaborate more to other designers and developers who share the same dreams with me. </h1>
+          </div>
+        </div>
     </>
   )
 }
