@@ -5,6 +5,8 @@ import { FaBehance } from "react-icons/fa6";
 import { BsFillPersonFill } from "react-icons/bs";
 import { BiSolidContact } from "react-icons/bi";
 import { RiPencilRuler2Line } from "react-icons/ri";
+import MobileProjectContainer from './components/MobileProjectContainer';
+import WebsiteProjectContainer from './components/WebsiteProjectContainer';
 import './App.css'
 
 //IMPORT IMAGES HERE
@@ -21,6 +23,7 @@ import attendancesystem from '/assets/attendancesystem.png'
 import fairygod from '/assets/fairygod.png'
 import loadapp from '/assets/LoadApp.png'
 import purplejeepney from '/assets/purplejeepney.png'
+import meddle1 from '/assets/meddle1.png'
 
 function App() {
   return (
@@ -95,18 +98,85 @@ function App() {
           <img src={projects} alt="projects" className='w-full h-auto mt-10'/>
           </div>
 
+          <div className='flex flex-col pt-32'>
+          <MobileProjectContainer
+            imageSrc={fairygod}
+            projectName="Fairy God Barbie"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vehicula metus eget ex consequat ullamcorper. Ut mattis maximus libero, vitae molestie leo dictum sit amet."
+            containerClass="mt-20"
+          />
 
-          <div className='flex flex-col w-full'>
-            <div className='flex w-full bg-palette3 px-24 items-start'>
-              <div className='flex w-1/2 items-end'>
-                <img src={fairygod} alt="fairygod" className='mt-16'/>
-              </div>
-              <div className='flex w-1/2 justify-center mt-16'>
-              <h1 className='flex font-bebasneue text-palette5 text-6xl'>Fairy God Barbie</h1>
-              </div>
-            </div>
+          <WebsiteProjectContainer
+            imageSrc={attendancesystem}
+            projectName="Attendance System"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vehicula metus eget ex consequat ullamcorper. Ut mattis maximus libero, vitae molestie leo dictum sit amet."
+            containerClass="mt-20"
+          />
+
+          <MobileProjectContainer
+            imageSrc={loadapp}
+            projectName="Loading Application"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vehicula metus eget ex consequat ullamcorper. Ut mattis maximus libero, vitae molestie leo dictum sit amet."
+            containerClass="mt-20"
+            backgroundClass='bg-palette1'
+          />
+
+          <WebsiteProjectContainer
+            imageSrc={purplejeepney}
+            projectName="Purple Jeepney"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vehicula metus eget ex consequat ullamcorper. Ut mattis maximus libero, vitae molestie leo dictum sit amet."
+            containerClass="mt-20"
+            backgroundClass='bg-palette3'
+          />
           </div>
 
+          <div className='flex px-4 w-full pt-32'>
+            <div className='flex flex-col w-1/2 items-start text-start px-32 gap-8'>
+              <img src={meddle1} alt="meddle1" className='w-1/4 h-auto'/>
+                <h1 className='font-varela text-palette2 text-4xl uppercase font-semibold'>Contact Me</h1>
+                <p className='font-varela text-palette2 text-md'>If you have questions, suggestions, and inquiries, please contact me via email or contact number, or send an email using the contact form.</p>
+              <div className='flex flex-col w-full gap-2'>
+                <p className='font-varela text-palette2 text-md'>Email</p>
+                <p className='font-varela text-palette2 text-md font-extrabold'>maandrheaivhon.work@gmail.com</p>
+              </div>
+                <div className='flex flex-col w-full gap-2'>
+                  <p className='font-varela text-palette2 text-md'>Mobile Number</p>
+                  <p className='font-varela text-palette2 text-md'>(+63) 968 290 3857</p>
+                </div>
+
+                <div className='flex w-full gap-8'>
+                  <a href="https://github.com/michinnn" target='_blank' rel='noopener noreferrer'><FaGithubAlt className='text-palette2' /></a>
+                  <a href="https://www.linkedin.com/in/mai-sanchez" target='_blank' rel='noopener noreferrer'><FaLinkedinIn className='text-palette2' /></a>
+                  <a href="https://www.behance.net/maisanchez" target='_blank' rel='noopener noreferrer'><FaBehance className='text-palette2' /></a>
+              </div>
+            </div>
+            <div className='flex w-1/2 justify-between items-center'>
+              <form className='w-full bg-palette2 rounded-lg p-8'>
+                <div className='w-full flex gap-10'>
+                <div className='w-1/2 mb-5'>
+                  <label for="firstName" className='block mb-2.5 text-palette5 text-md font-medium font-varela'>First Name</label>
+                  <input type="text" id="firstName" className='bg-palette5 border rounded-md focus:ring-brand focus:border-brand focus:outline-palette2 text-heading text-sm block w-full px-3 py-3' placeholder='Your Name'></input>
+                </div>
+                <div className='w-1/2 mb-5'>
+                  <label for="lastName" className='block mb-2.5 text-palette5 text-md font-medium font-varela'>Last Name</label>
+                  <input type="text" id="lastName" className='bg-palette5 border rounded-md focus:ring-brand focus:border-brand focus:outline-palette2 text-heading text-sm block w-full px-3 py-3' placeholder='Your Last Name'></input>
+                </div>
+                </div>
+                <div className='mb-5'>
+                  <label for="email" className='block mb-2.5 text-palette5 text-md font-medium font-varela'>Email Address</label>
+                  <input type="email" id="email" className='bg-palette5 border rounded-md focus:ring-brand focus:border-brand focus:outline-palette2 text-heading text-sm block w-full px-3 py-3' placeholder='example@gmail.com'></input>
+                </div>
+                <div className='mb-5'>
+                  <label for="message" className='block mb-2.5 text-palette5 text-md font-medium font-varela'>Subject</label>
+                  <textarea id="message" className='bg-palette5 border rounded-md focus:ring-brand focus:border-brand focus:outline-palette2 text-heading text-sm block w-full px-3 py-3' placeholder='Insert Subject here...'></textarea>
+                </div>
+                <div className='mb-5'>
+                  <label for="message" className='block mb-2.5 text-palette5 text-md font-medium font-varela'>Message</label>
+                  <textarea id="message" rows="4" className='bg-palette5 border rounded-md focus:ring-brand focus:border-brand focus:outline-palette2 text-heading text-sm block w-full px-3 py-3' placeholder='Write your message here...'></textarea>
+                </div>
+              </form>
+            </div>         
+          </div>
         </div>
     </>
   )
