@@ -151,7 +151,7 @@ function App() {
               </div>
             </div>
             <div className='flex w-1/2 justify-between items-center'>
-              <form className='w-full bg-palette2 rounded-lg p-8'>
+              <form className='w-full bg-palette2 rounded-lg p-8 flex flex-col  '>
                 <div className='w-full flex gap-10'>
                 <div className='w-1/2 mb-5'>
                   <label for="firstName" className='block mb-2.5 text-palette5 text-md font-medium font-varela'>First Name</label>
@@ -173,6 +173,11 @@ function App() {
                 <div className='mb-5'>
                   <label for="message" className='block mb-2.5 text-palette5 text-md font-medium font-varela'>Message</label>
                   <textarea id="message" rows="4" className='bg-palette5 border rounded-md focus:ring-brand focus:border-brand focus:outline-palette2 text-heading text-sm block w-full px-3 py-3' placeholder='Write your message here...'></textarea>
+                </div>
+                <div className='flex w-full justify-end'>
+                <button type='submit' className='w-1/3 text-palette5 bg-palette3/50 box-border border-transparent hover:bg-palette3 rounded-lg text-md px-8 py-2'>
+                  Submit
+                </button>
                 </div>
               </form>
             </div>         
