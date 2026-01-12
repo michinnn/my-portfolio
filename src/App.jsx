@@ -55,7 +55,7 @@ function App() {
           <div className='w-full md:w-1/2 flex items-center justify-center md:justify-end mt-10 md:mt-0'>
             <div className='flex relative w-full h-auto'>
               <img src={bgimage} alt="" className='w-full h-auto scale-120' />
-              <img src={me} alt="overlay" className='absolute w-full h-auto scale-75 -mt-9' />
+              <img src={me} alt="overlay" className='absolute w-full h-auto scale-75 -mt-5 md:-mt-9' />
             </div>
           </div>
         </div>
@@ -66,36 +66,36 @@ function App() {
         <img src={bgcircle} alt="" className='w-full h-auto scale-120' />
       </div>
         <div className='flex w-full justify-center'>
-          <img src={pickmeup1} alt="pickmeup" className='w-1/6 h-auto scale-50'/>
+          <img src={pickmeup1} alt="pickmeup" className='w-1/2 md:w-1/6 h-auto scale-50'/>
         </div>
-        <div className='flex w-full flex-col justify-center font-varela text-palette1 text-center py-12 px-36 gap-24'>
+        <div className='flex w-full flex-col justify-center font-varela text-palette1 text-center py-12 px-4 md:px-36 gap-24'>
           <div className='flex flex-col w-full text-justify gap-8 items-start '> 
-            <h1 className='text-2xl'>This is Ma. Andrhea Ivhon, a UI/UX designer and a Junior Front-End Developer.</h1>
-            <p className='text-lg leading-10 font-extralight'>I spent most of my time working on enhancing my designing and developing skills. Nowadays, we should not settle on things we already have knowledge. Technology is innovating every time so we should also innovate and up-skill.</p>
+            <h1 className='text-md md:text-2xl'>This is Ma. Andrhea Ivhon, a UI/UX designer and a Junior Front-End Developer.</h1>
+            <p className='text-xs md:text-lg leading-8 md:leading-10 font-extralight'>I spent most of my time working on enhancing my designing and developing skills. Nowadays, we should not settle on things we already have knowledge. Technology is innovating every time so we should also innovate and up-skill.</p>
           </div>
           <div className='flex flex-col w-full text-justify gap-8 items-start'>
-            <h1 className='text-2xl'>Why UI/UX Designing and Developing?</h1>
-            <p className='text-lg leading-10 font-extralight'>As a creative person and a person who have a playful mind, I fall in love first in designing application and website interface. I got curious on developing my own design that’s why I am on my learning phase on developing web and app. I really love whenever I saw the result first hand on what I designed turn into a interactive website and mobile application.</p>
+            <h1 className='text-md md:text-2xl'>Why UI/UX Designing and Developing?</h1>
+            <p className='text-xs md:text-lg leading-8 md:leading-10 font-extralight'>As a creative person and a person who have a playful mind, I fall in love first in designing application and website interface. I got curious on developing my own design that’s why I am on my learning phase on developing web and app. I really love whenever I saw the result first hand on what I designed turn into a interactive website and mobile application.</p>
           </div>
           <div className='flex flex-col w-full text-justify gap-8 items-start'>
-            <h1 className='text-2xl'>In the near future, I want to collaborate more to other designers and developers who share the same dreams with me. </h1>
+            <h1 className='text-md:text-2xl'>In the near future, I want to collaborate more to other designers and developers who share the same dreams with me. </h1>
           </div>
           </div>
         </div>
 
         <div className='flex w-full flex-col py4 px-4 justify-center items-center'>
           <img src={notdeadyet} alt="notdeadyet" className='w-1/6 h-auto scale-50'/>
-          <h1 className='text-5xl font-semibold text-palette2 font-varela'>Skill Set</h1>
+          <h1 className='text-3xl md:text-5xl font-semibold text-palette2 font-varela'>Skill Set</h1>
           <img src={notdeadyet} alt="notdeadyet" className='w-1/6 h-auto scale-50 rotate-180'/>
 
-          <div className='flex w-full h-auto py-4 px-4 scale-90'>
+          <div className='flex w-full h-auto scale-90'>
             <img src={skillset} alt="skillset" className='w-full h-auto mt-10'/>
           </div>
         </div>
 
         <div className='flex flex-col w-full h-auto py-32 justify-center items-center'>
-          <div className='flex w-1/4 h-auto scale-100'>
-          <img src={projects} alt="projects" className='w-full h-auto mt-10'/>
+          <div className='flex w-1/2 md:w-1/4 h-auto scale-100'>
+          <img src={projects} alt="projects" className='w-full h-auto'/>
           </div>
 
           <div className='flex flex-col pt-32'>
@@ -130,11 +130,11 @@ function App() {
           />
           </div>
 
-          <div className='flex px-4 w-full pt-32'>
-            <div className='flex flex-col w-1/2 items-start text-start px-32 gap-8'>
-              <img src={meddle1} alt="meddle1" className='w-1/4 h-auto'/>
-                <h1 className='font-varela text-palette2 text-4xl uppercase font-semibold'>Contact Me</h1>
-                <p className='font-varela text-palette2 text-md'>If you have questions, suggestions, and inquiries, please contact me via email or contact number, or send an email using the contact form.</p>
+          <div className='flex flex-col md:flex-row px-4 w-full pt-32 gap-8'>
+            <div className='flex flex-col w-full md:w-1/2 items-start text-start px-4 gap-8'>
+              <img src={meddle1} alt="meddle1" className='w-1/6 h-auto'/>
+                <h1 className='font-varela text-palette2 text-2xl md:text-4xl uppercase font-semibold'>Contact Me</h1>
+                <p className='font-varela text-palette2 text-xs md:text-md pr-0 md:pr-24'>If you have questions, suggestions, and inquiries, please contact me via email or contact number, or send an email using the contact form.</p>
               <div className='flex flex-col w-full gap-2'>
                 <p className='font-varela text-palette2 text-md'>Email</p>
                 <p className='font-varela text-palette2 text-md font-extrabold'>maandrheaivhon.work@gmail.com</p>
@@ -150,9 +150,9 @@ function App() {
                   <a href="https://www.behance.net/maisanchez" target='_blank' rel='noopener noreferrer'><FaBehance className='text-palette2' /></a>
               </div>
             </div>
-            <div className='flex w-1/2 justify-between items-center'>
+            <div className='flex w-full md:w-1/2 justify-between items-center'>
               <form className='w-full bg-palette2 rounded-lg p-8 flex flex-col  '>
-                <div className='w-full flex gap-10'>
+                <div className='w-full flex gap-5 md:gap-10'>
                 <div className='w-1/2 mb-5'>
                   <label for="firstName" className='block mb-2.5 text-palette5 text-md font-medium font-varela'>First Name</label>
                   <input type="text" id="firstName" className='bg-palette5 border rounded-md focus:ring-brand focus:border-brand focus:outline-palette2 text-heading text-sm block w-full px-3 py-3' placeholder='Your Name'></input>
@@ -175,7 +175,7 @@ function App() {
                   <textarea id="message" rows="4" className='bg-palette5 border rounded-md focus:ring-brand focus:border-brand focus:outline-palette2 text-heading text-sm block w-full px-3 py-3' placeholder='Write your message here...'></textarea>
                 </div>
                 <div className='flex w-full justify-end'>
-                <button type='submit' className='w-1/3 text-palette5 bg-palette3/50 box-border border-transparent hover:bg-palette3 rounded-lg text-md px-8 py-2'>
+                <button type='submit' className='w-1/3 justify-center flex text-palette5 bg-palette3/50 box-border border-transparent hover:bg-palette3 rounded-lg text-md px-8 py-2'>
                   Submit
                 </button>
                 </div>
