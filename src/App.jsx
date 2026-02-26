@@ -8,6 +8,7 @@ import { RiPencilRuler2Line } from "react-icons/ri";
 import MobileProjectContainer from './components/MobileProjectContainer';
 import WebsiteProjectContainer from './components/WebsiteProjectContainer';
 import './App.css'
+import 'animate.css'
 
 //IMPORT IMAGES HERE
 import logo2 from '/assets/logo2.png'
@@ -24,20 +25,21 @@ import fairygod from '/assets/fairygod.png'
 import loadapp from '/assets/LoadApp.png'
 import purplejeepney from '/assets/purplejeepney.png'
 import meddle1 from '/assets/meddle1.png'
+import scrollup from '/assets/scrollup.png'
 
 function App() {
   return (
     <>
       <div className='w-full flex flex-col items-center justify-center font-varela'>
-        <div className='flex flex-col md:flex-row items-center w-full max-w-6xl px-4 py-4 gap-4 md:gap-0'>
+        <div className='fixed  top-0 z-50 flex flex-col md:flex-row items-center w-full max-w-6xl px-4 py-4 gap-4 md:gap-0'>
           <div className='w-full md:w-1/4 flex justify-center md:justify-start'>
             <img src={logo2} alt="icon" className='w-10 h-10' />
           </div>
 
           <div className='w-full md:w-1/2 flex justify-center gap-4 md:gap-20 text-palette5 font-semibold bg-palette1 py-4 rounded-full text-xs md:text-base'>
-            <a href="#" className="hover:text-palette3 flex items-center gap-2"> <RiPencilRuler2Line /> Projects</a>
-            <a href="#" className="hover:text-palette3 flex items-center gap-2"> <BsFillPersonFill /> About</a>
-            <a href="#" className="hover:text-palette3 flex items-center gap-2"> <BiSolidContact /> Contact</a>
+            <a href="#about" className="hover:text-palette3 flex items-center gap-2"> <BsFillPersonFill /> About</a>
+            <a href="#projects" className="hover:text-palette3 flex items-center gap-2"> <RiPencilRuler2Line /> Projects</a>
+            <a href="#contact" className="hover:text-palette3 flex items-center gap-2"> <BiSolidContact /> Contact</a>
           </div>
 
           <div className='w-full md:w-1/4 flex justify-center md:justify-end gap-10 text-xl'>
@@ -47,10 +49,10 @@ function App() {
           </div>
         </div>
 
-        <div className='flex flex-col md:flex-row w-full px-4 max-w-6xl'>
+        <div id='home' className='flex flex-col md:flex-row w-full pt-28 px-4 max-w-6xl'>
           <div className='w-full md:w-1/2 flex flex-col items-center md:items-start justify-start mt-10 md:mt-24 text-2xl md:text-4xl text-center md:text-left'>
             <h1 className='text-palette2 uppercase tracking-widest'>I'm Mai, a <span className='text-palette1'>UI Designer</span> and <span className='text-palette1'>Front-End Developer</span></h1>
-            <img src={arrowdown} alt="" className='mt-10 h-20 md:h-32' />
+            <a href="#about"><img src={arrowdown} alt="" className='mt-10 h-20 md:h-32' /></a>
           </div>
           <div className='w-full md:w-1/2 flex items-center justify-center md:justify-end mt-10 md:mt-0'>
             <div className='flex relative w-full h-auto'>
@@ -61,7 +63,14 @@ function App() {
         </div>
       </div>
 
-  <div className='w-full flex flex-col justify-center items-center py-20 px-4 mt-10'>
+  <div id='about' className='w-full flex flex-col justify-center items-center py-20 px-4 mt-10'>
+
+      <a href="#home">
+        <div className='fixed bottom-10 right-10 flex flex-col w-16 h-16 z-50'>
+          <img src={scrollup} alt="buttonup" />
+        </div>
+      </a>
+
       <div className='flex absolute w-full h-auto'>
         <img src={bgcircle} alt="" className='w-full h-auto scale-120' />
       </div>
@@ -93,7 +102,7 @@ function App() {
           </div>
         </div>
 
-        <div className='flex flex-col w-full h-auto py-32 justify-center items-center'>
+        <div id='projects' className='flex flex-col w-full h-auto py-32 justify-center items-center'>
           <div className='flex w-1/2 md:w-1/4 h-auto scale-100'>
           <img src={projects} alt="projects" className='w-full h-auto'/>
           </div>
@@ -130,7 +139,7 @@ function App() {
           />
           </div>
 
-          <div className='flex flex-col md:flex-row px-4 w-full pt-32 gap-8'>
+          <div id='contact' className='flex flex-col md:flex-row px-4 w-full pt-32 gap-8'>
             <div className='flex flex-col w-full md:w-1/2 items-start text-start px-4 gap-8'>
               <img src={meddle1} alt="meddle1" className='w-1/6 h-auto'/>
                 <h1 className='font-varela text-palette2 text-2xl md:text-4xl uppercase font-semibold'>Contact Me</h1>
