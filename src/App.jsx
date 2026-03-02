@@ -111,21 +111,21 @@ function App() {
           <MobileProjectContainer
             imageSrc={fairygod}
             projectName="Fairy God Barbie"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vehicula metus eget ex consequat ullamcorper. Ut mattis maximus libero, vitae molestie leo dictum sit amet."
+            description="An e-commerce mobile application for beauty products. This target their consumer for easy product checkout and daily updates. Consumers can easily view the availability of the product and its price."
             containerClass="mt-20"
           />
 
           <WebsiteProjectContainer
             imageSrc={attendancesystem}
             projectName="Attendance System"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vehicula metus eget ex consequat ullamcorper. Ut mattis maximus libero, vitae molestie leo dictum sit amet."
+            description="An attendance system being used by the company for attendance checking and for communication. Employees can post just like any other social media and they can also view the tasks they were assigned to."
             containerClass="mt-20"
           />
 
           <MobileProjectContainer
             imageSrc={loadapp}
             projectName="Loading Application"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vehicula metus eget ex consequat ullamcorper. Ut mattis maximus libero, vitae molestie leo dictum sit amet."
+            description="A simple mobile application for sim networks. Users can also top-up their wallet for easy access on loading their sims."
             containerClass="mt-20"
             backgroundClass='bg-palette1'
           />
@@ -133,7 +133,7 @@ function App() {
           <WebsiteProjectContainer
             imageSrc={purplejeepney}
             projectName="Purple Jeepney"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vehicula metus eget ex consequat ullamcorper. Ut mattis maximus libero, vitae molestie leo dictum sit amet."
+            description="A simple website for a Creatives Website showcasing their works/portfolio, members, and their history."
             containerClass="mt-20"
             backgroundClass='bg-palette3'
           />
