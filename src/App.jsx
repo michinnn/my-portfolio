@@ -247,7 +247,7 @@ function App() {
               </div>
             </div>
             <div className='flex w-full md:w-1/2 justify-between items-center'>
-              <form className='w-full bg-palette2 rounded-lg p-8 flex flex-col' onSubmit={handleSubmit}>
+              {/* <form className='w-full bg-palette2 rounded-lg p-8 flex flex-col' onSubmit={handleSubmit}>
                 <div className='w-full flex gap-5 md:gap-10'>
                   <div className='w-1/2 mb-5'>
                     <label htmlFor='firstName' className='block mb-2.5 text-palette5 text-md font-medium font-varela'>First Name</label>
@@ -329,7 +329,7 @@ function App() {
                     {sending ? 'Sending...' : 'Submit'}
                   </button>
                 </div>
-              </form>
+              </form>  */}
             </div>         
           </div>
         </div>
