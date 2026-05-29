@@ -26,8 +26,71 @@ import loadapp from '/assets/LoadApp.png'
 import purplejeepney from '/assets/purplejeepney.png'
 import meddle1 from '/assets/meddle1.png'
 import scrollup from '/assets/scrollup.png'
+import LaundryApp from '/assets/LaundryApp1.png'
+import CarRent from '/assets/RentCar1.png'
+import PetApp from '/assets/PetKonek1.png'
 
 function App() {
+  const initialFormData = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: '',
+    message: '',
+  }
+
+  const [formData, setFormData] = useState(initialFormData)
+  const [status, setStatus] = useState({ type: 'idle', message: '' })
+  const [sending, setSending] = useState(false)
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    setStatus({ type: 'idle', message: '' })
+
+    const { firstName, lastName, email, subject, message } = formData
+    if (!firstName || !lastName || !email || !subject || !message) {
+      setStatus({ type: 'error', message: 'Please fill in all fields before submitting.' })
+      return
+    }
+
+    setSending(true)
+    setStatus({ type: 'sending', message: 'Sending message...' })
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const text = await response.text()
+      let result = {}
+      try {
+        result = text ? JSON.parse(text) : {}
+      } catch {
+        result = { error: text || 'Server returned invalid JSON.' }
+      }
+
+      if (!response.ok) {
+        throw new Error(result.error || response.statusText || 'Unable to send the message.')
+      }
+
+      setStatus({ type: 'success', message: 'Your message was sent successfully!' })
+      setFormData(initialFormData)
+    } catch (error) {
+      setStatus({ type: 'error', message: error.message || 'Something went wrong. Please try again.' })
+    } finally {
+      setSending(false)
+    }
+  }
+
   return (
     <>
       <div className='w-full flex flex-col items-center justify-center font-varela'>
@@ -137,6 +200,30 @@ function App() {
             containerClass="mt-20"
             backgroundClass='bg-palette3'
           />
+
+          <MobileProjectContainer
+            imageSrc={PetApp}
+            projectName="Pet App"
+            description="A simple mobile application for pet owners to book services for their pets and avail veterinary care through an app."
+            containerClass="mt-20"
+            backgroundClass='bg-palette1'
+          />
+
+          <WebsiteProjectContainer
+            imageSrc={CarRent}
+            projectName="Car Rental"
+            description="A website for a car rental service showcasing their fleet, booking system, and customer reviews."
+            containerClass="mt-20"
+            backgroundClass='bg-palette3'
+          />
+
+          <MobileProjectContainer
+            imageSrc={LaundryApp}
+            projectName="Laundry Application"
+            description="A simple mobile application for laundry services. Users can schedule pickups, make an order, track their orders, and make payments."
+            containerClass="mt-20"
+            backgroundClass='bg-palette1'
+          />
           </div>
 
           <div id='contact' className='flex flex-col md:flex-row px-4 w-full pt-32 gap-8'>
@@ -160,33 +247,87 @@ function App() {
               </div>
             </div>
             <div className='flex w-full md:w-1/2 justify-between items-center'>
-              <form className='w-full bg-palette2 rounded-lg p-8 flex flex-col  '>
+              <form className='w-full bg-palette2 rounded-lg p-8 flex flex-col' onSubmit={handleSubmit}>
                 <div className='w-full flex gap-5 md:gap-10'>
-                <div className='w-1/2 mb-5'>
-                  <label for="firstName" className='block mb-2.5 text-palette5 text-md font-medium font-varela'>First Name</label>
-                  <input type="text" id="firstName" className='bg-palette5 border rounded-md focus:ring-brand focus:border-brand focus:outline-palette2 text-heading text-sm block w-full px-3 py-3' placeholder='Your Name'></input>
-                </div>
-                <div className='w-1/2 mb-5'>
-                  <label for="lastName" className='block mb-2.5 text-palette5 text-md font-medium font-varela'>Last Name</label>
-                  <input type="text" id="lastName" className='bg-palette5 border rounded-md focus:ring-brand focus:border-brand focus:outline-palette2 text-heading text-sm block w-full px-3 py-3' placeholder='Your Last Name'></input>
-                </div>
+                  <div className='w-1/2 mb-5'>
+                    <label htmlFor='firstName' className='block mb-2.5 text-palette5 text-md font-medium font-varela'>First Name</label>
+                    <input
+                      type='text'
+                      id='firstName'
+                      name='firstName'
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      className='bg-palette5 border rounded-md focus:ring-brand focus:border-brand focus:outline-palette2 text-heading text-sm block w-full px-3 py-3'
+                      placeholder='Your Name'
+                      required
+                    />
+                  </div>
+                  <div className='w-1/2 mb-5'>
+                    <label htmlFor='lastName' className='block mb-2.5 text-palette5 text-md font-medium font-varela'>Last Name</label>
+                    <input
+                      type='text'
+                      id='lastName'
+                      name='lastName'
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      className='bg-palette5 border rounded-md focus:ring-brand focus:border-brand focus:outline-palette2 text-heading text-sm block w-full px-3 py-3'
+                      placeholder='Your Last Name'
+                      required
+                    />
+                  </div>
                 </div>
                 <div className='mb-5'>
-                  <label for="email" className='block mb-2.5 text-palette5 text-md font-medium font-varela'>Email Address</label>
-                  <input type="email" id="email" className='bg-palette5 border rounded-md focus:ring-brand focus:border-brand focus:outline-palette2 text-heading text-sm block w-full px-3 py-3' placeholder='example@gmail.com'></input>
+                  <label htmlFor='email' className='block mb-2.5 text-palette5 text-md font-medium font-varela'>Email Address</label>
+                  <input
+                    type='email'
+                    id='email'
+                    name='email'
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className='bg-palette5 border rounded-md focus:ring-brand focus:border-brand focus:outline-palette2 text-heading text-sm block w-full px-3 py-3'
+                    placeholder='example@gmail.com'
+                    required
+                  />
                 </div>
                 <div className='mb-5'>
-                  <label for="message" className='block mb-2.5 text-palette5 text-md font-medium font-varela'>Subject</label>
-                  <textarea id="message" className='bg-palette5 border rounded-md focus:ring-brand focus:border-brand focus:outline-palette2 text-heading text-sm block w-full px-3 py-3' placeholder='Insert Subject here...'></textarea>
+                  <label htmlFor='subject' className='block mb-2.5 text-palette5 text-md font-medium font-varela'>Subject</label>
+                  <textarea
+                    id='subject'
+                    name='subject'
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    className='bg-palette5 border rounded-md focus:ring-brand focus:border-brand focus:outline-palette2 text-heading text-sm block w-full px-3 py-3'
+                    placeholder='Insert Subject here...'
+                    rows='2'
+                    required
+                  />
                 </div>
                 <div className='mb-5'>
-                  <label for="message" className='block mb-2.5 text-palette5 text-md font-medium font-varela'>Message</label>
-                  <textarea id="message" rows="4" className='bg-palette5 border rounded-md focus:ring-brand focus:border-brand focus:outline-palette2 text-heading text-sm block w-full px-3 py-3' placeholder='Write your message here...'></textarea>
+                  <label htmlFor='message' className='block mb-2.5 text-palette5 text-md font-medium font-varela'>Message</label>
+                  <textarea
+                    id='message'
+                    name='message'
+                    rows='4'
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    className='bg-palette5 border rounded-md focus:ring-brand focus:border-brand focus:outline-palette2 text-heading text-sm block w-full px-3 py-3'
+                    placeholder='Write your message here...'
+                    required
+                  />
+                </div>
+                <div className='mb-5'>
+                  {status.type === 'success' && <p className='text-green-600'>{status.message}</p>}
+                  {status.type === 'error' && <p className='text-red-600'>{status.message}</p>}
+                  {status.type === 'sending' && <p className='text-palette2'>{status.message}</p>}
                 </div>
                 <div className='flex w-full justify-end'>
-                <button type='submit' className='w-1/3 justify-center flex text-palette5 bg-palette3/50 box-border border-transparent hover:bg-palette3 rounded-lg text-md px-8 py-2'>
-                  Submit
-                </button>
+                  <button
+                    type='submit'
+                    disabled={sending}
+                    className='w-1/3 justify-center flex text-palette5 bg-palette3/50 box-border border-transparent hover:bg-palette3 rounded-lg text-md px-8 py-2 disabled:cursor-not-allowed disabled:opacity-60'
+                  >
+                    {sending ? 'Sending...' : 'Submit'}
+                  </button>
                 </div>
               </form>
             </div>         
